@@ -1,20 +1,27 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="App">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Belajar REST API</title>
     <link rel="stylesheet" href="node_modules/semantic-ui/dist/semantic.min.css">
     <link rel="stylesheet" href="node_modules/angular/angular-csp.css">
     <script src="node_modules/angular/angular.min.js"></script>
-    <script type="text/javascript" src="frontend/contact.js"></script>
+    <script type="text/javascript" src="frontend/app.js"></script>
   </head>
   <body>
 
-    <div class="" ng-controller="contact_ctrl">
-          <button type="button" ng-click="getItems()" name="button">Get Contact</button>
-          <ul>
-              <li ng-repeat="item in items"> {{ items.name }}</li>
-          </ul>
+    <br>
+
+    <div class="ui three column stackable grid">
+          <div class="column">
+          </div>
+          <div class="column">
+            <div class="ui divided items" ng-controller="Contact">
+                <div class="item" ng-repeat="item in items">
+                    <h3>{{ item.name}}</h3>
+                </div>
+            </div>
+          </div>
     </div>
 
     <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
