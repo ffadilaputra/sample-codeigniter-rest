@@ -16,6 +16,7 @@ class Contact extends REST_Controller {
     $id = $this->get('id');
     if ($id == '') {
         $contact = $this->db->get('telephone')->result();
+
     }else{
         $this->db->where('id',$id);
         $contact = $this->db->get('telephone')->result();
